@@ -32,7 +32,7 @@ object DueDate {
 		DayOfWeek.THURSDAY,
 		DayOfWeek.FRIDAY)
 
-	// increase the date until it will be a valid wokring day (e.g. non-weeken), recursive function
+	// increase the date until it will be a valid working day (e.g. non-weekend), recursive function
 	private def addDays(date: ZonedDateTime): ZonedDateTime = {
 		val withPlusDay = date.plusDays(1)
 		if (isWorkingHour(withPlusDay)) withPlusDay
